@@ -1,3 +1,5 @@
+import angular from 'angular';
+
 /**
  * Manages all notification systems.
  */
@@ -8,7 +10,7 @@ angular.module('ngAlerts').factory('ngAlertsMngr', [
     function (ngAlertsEvent, NgAlert, ngAlertsId) {
         'use strict';
 
-        var alerts = [],
+        let alerts = [],
             mngr = {};
 
         /**
@@ -39,11 +41,11 @@ angular.module('ngAlerts').factory('ngAlertsMngr', [
 
         /**
          * Adds a new alert
-         * @param {String} msg - The message in the alert.
-         * @param {String} type - The alert type (success, warning, etc...).
+         * @param data
          */
         mngr.add = function (data) {
-            var i, ids = [];
+            let i, ids = [];
+
             if (!data.id) {
                 for (i = 0; i < alerts.length; i += 1) {
                     ids.push(alerts[i].id);
@@ -61,7 +63,8 @@ angular.module('ngAlerts').factory('ngAlertsMngr', [
          * @param {String} id - The unique identifier of the alert.
          */
         mngr.remove = function (id) {
-            var i;
+            let i;
+
             for (i = 0; i < alerts.length; i += 1) {
                 if (alerts[i].id === id) {
                     alerts.splice(i, 1);

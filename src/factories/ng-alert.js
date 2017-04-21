@@ -1,3 +1,5 @@
+import angular from 'angular';
+
 /**
  * An alert model.
  * @member {String} id - The unique id.
@@ -18,8 +20,8 @@ angular.module('ngAlerts').factory('NgAlert', [
          * @param {String} [args.type=default] - The type of alert.
          * @param {Number} [args.time=Date.now()] - The time of the notification (Miliseconds since Jan 1 1970).
          */
-        var NgAlert = function (args) {
-            var params = angular.extend({
+        let NgAlert = function (args) {
+            let params = angular.extend({
                 id: ngAlertsId.create(),
                 msg: '',
                 type: 'default',

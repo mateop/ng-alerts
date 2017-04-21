@@ -1,3 +1,5 @@
+import angular from 'angular';
+
 /**
  * Wraps a popover object to the handler (using the angular bootstrap "popover" directive).
  * @param {String=} empty-text - The text to display if the list is empty (defaults to global set in provider).
@@ -29,7 +31,7 @@ angular.module('ngAlerts').directive('ngAlertsModal', [
                 $scope.openModal = function () {
                     $scope.modalInstance = $uibModal.open({
                         animation: true,
-                        templateUrl: 'template/ng-alerts/sub/modal-list.html',
+                        template: require('../tpls/sub/modal-list.html'),
                         size: $attrs.size || 'lg'
                     });
 

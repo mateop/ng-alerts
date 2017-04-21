@@ -1,3 +1,5 @@
+import angular from 'angular';
+
 /**
  * Provides event systems to ngAlerts.
  */

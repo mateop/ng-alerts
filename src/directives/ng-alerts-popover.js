@@ -1,3 +1,5 @@
+import angular from 'angular';
+
 /**
  * Wraps a popover object to the handler (using the angular bootstrap "popover" directive).
  * @param {String=} empty-text - The text to display if the list is empty (defaults to global set in provider).
@@ -6,9 +8,7 @@
 angular.module('ngAlerts').directive('ngAlertsPopover', [
     'ngAlertsEvent',
     '$compile',
-    '$timeout',
-    '$sce',
-    function (ngAlertsEvent, $compile, $timeout, $sce) {
+    function (ngAlertsEvent, $compile) {
         'use strict';
 
         return {
@@ -35,7 +35,7 @@ angular.module('ngAlerts').directive('ngAlertsPopover', [
                     $element.attr('popover-class', 'ng-alerts-popover-list');
                 }
 
-                $scope.templateUrl = 'template/ng-alerts/sub/popover-list.html';
+                $scope.template = require('../tpls/sub/popover-list.html');
                 $scope.emptyText = $attrs.emptyText;
 
                 $compile($element)($scope);

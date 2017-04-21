@@ -1,3 +1,5 @@
+import angular from 'angular';
+
 /**
  * Used internally to show the alert queue.
  */
@@ -10,7 +12,7 @@ angular.module('ngAlerts').directive('ngAlertsQueue', [
         'use strict';
 
         return {
-            templateUrl: 'template/ng-alerts/queue.html',
+            template: require('../tpls/queue.html'),
             link: function ($scope) {
                 $scope.alerts = [];
 
@@ -18,7 +20,8 @@ angular.module('ngAlerts').directive('ngAlertsQueue', [
                  * Removes a specific alert by id.
                  */
                 function remove(id) {
-                    var i;
+                    let i;
+
                     for (i = 0; i < $scope.alerts.length; i += 1) {
                         if ($scope.alerts[i].id === id) {
                             $scope.alerts.splice(i, 1);

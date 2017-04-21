@@ -1,3 +1,4 @@
+import angular from 'angular';
 /**
  * Shows a simple alert total.
  * @param {Bool=} badge - To show the number as a badge.
@@ -10,9 +11,8 @@ angular.module('ngAlerts').directive('ngAlertsCount', [
         'use strict';
 
         return {
-            templateUrl: 'template/ng-alerts/count.html',
+            template: require('../tpls/count.html'),
             link: function ($scope, $element, $attrs) {
-                
                 /**
                  * Resets the alert count view.
                  */

@@ -1,3 +1,5 @@
+import angular from 'angular';
+
 /**
  * Assists with writing unique identifiers.
  */
@@ -5,7 +7,7 @@ angular.module('ngAlerts').factory('ngAlertsId', [
     function () {
         'use strict';
 
-        var factory = {};
+        let factory = {};
 
         /**
          * Creates a unique identifier.
@@ -13,9 +15,9 @@ angular.module('ngAlerts').factory('ngAlertsId', [
          * @returns {String} The unique identifier.
          */
         factory.create = function (existing) {
-            existing = existing || [];
+            let ret;
 
-            var ret;
+            existing = existing || [];
 
             do {
                 ret = Date.now();

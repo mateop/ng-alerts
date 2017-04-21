@@ -1,3 +1,5 @@
+import angular from 'angular';
+
 /**
  * Manages all notification systems.
  */
@@ -5,7 +7,7 @@ angular.module('ngAlerts').factory('ngAlertsUtils', [
     function () {
         'use strict';
 
-        var utils = {},
+        let utils = {},
             TIME = {};
 
         /**
@@ -35,34 +37,35 @@ angular.module('ngAlerts').factory('ngAlertsUtils', [
          */
         utils.timeSince = function (timestamp) {
 
-            var r = 0,
+            let r = 0,
                 field = '',
                 seconds = Math.floor((Date.now() - timestamp) / 1000);
 
             if (seconds < TIME.minute) {
                 return seconds + ' ' + utils.plural('second', seconds) + ' ago';
-            } else {
-                if (seconds < TIME.hour) {
-                    r = Math.round(seconds / TIME.minute);
-                    field = 'minute';
-                } else if (seconds < TIME.day) {
-                    r = Math.round(seconds / TIME.hour);
-                    field = 'hour';
-                } else if (seconds < TIME.week) {
-                    r = Math.round(seconds / TIME.day);
-                    field = 'day';
-                } else if (seconds < TIME.month) {
-                    r = Math.round(seconds / TIME.week);
-                    field = 'week';
-                } else if (seconds < TIME.year) {
-                    r = Math.round(seconds / TIME.month);
-                    field = 'month';
-                } else {
-                    r = Math.round(seconds / TIME.year);
-                    field = 'year';
-                }
-                return 'About ' + r + ' ' + utils.plural(field, r) + ' ago';
             }
+
+            if (seconds < TIME.hour) {
+                r = Math.round(seconds / TIME.minute);
+                field = 'minute';
+            } else if (seconds < TIME.day) {
+                r = Math.round(seconds / TIME.hour);
+                field = 'hour';
+            } else if (seconds < TIME.week) {
+                r = Math.round(seconds / TIME.day);
+                field = 'day';
+            } else if (seconds < TIME.month) {
+                r = Math.round(seconds / TIME.week);
+                field = 'week';
+            } else if (seconds < TIME.year) {
+                r = Math.round(seconds / TIME.month);
+                field = 'month';
+            } else {
+                r = Math.round(seconds / TIME.year);
+                field = 'year';
+            }
+            return 'About ' + r + ' ' + utils.plural(field, r) + ' ago';
+
         };
 
         return utils;
