@@ -1,6 +1,3 @@
-# Project specific
 /node_modules
-/bower_components
 /test
-/src
-/Gruntfile.js
+
