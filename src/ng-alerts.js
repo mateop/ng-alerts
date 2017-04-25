@@ -1,5 +1,3 @@
-let angular = require('angular');
-
 let moduleName = 'ngAlerts';
 
 export default angular.module(moduleName, [alert])

@@ -1,5 +1,5 @@
-<div id="ng-alerts-queue" class="{{location}}">
-    <div uib-alert ng-repeat="alert in alerts"  ng-class="'alert-' + (alert.type || 'warning')" type="{{alert.type}}" close="remove(alert.id)">
+<div id="ng-alerts-queue" class="{{ location }}" >
+    <div uib-alert ng-repeat="alert in alerts" ng-class="'alert-' + (alert.type || 'warning')" type="{{alert.type}}" close="remove(alert.id)">
         {{alert.msg}}
     </div>
 </div>

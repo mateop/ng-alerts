@@ -2,17 +2,18 @@
     <div ng-show="alerts.length > 0">
         <table class="table table-hover table-condensed">
             <tbody>
-                <tr ng-repeat="alert in alerts" ng-class="alert.type">
-                    <td>
-                        <small>{{alert.getTime()}}</small><br />
-                        {{alert.msg}}
-                    </td>
-                    <td>
-                        <button ng-click="remove(alert.id, $event)" type="button" class="close" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </td>
-                </tr>
+            <tr ng-repeat="alert in alerts" ng-class="alert.type">
+                <td>
+                    <small>{{alert.getTime()}}</small>
+                    <br/>
+                    {{alert.msg}}
+                </td>
+                <td>
+                    <button ng-click="remove(alert.id, $event)" type="button" class="close" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </td>
+            </tr>
             </tbody>
         </table>
     </div>
