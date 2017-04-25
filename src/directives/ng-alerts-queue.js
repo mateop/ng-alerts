@@ -1,5 +1,3 @@
-import angular from 'angular';
-
 /**
  * Used internally to show the alert queue.
  */

@@ -1,5 +1,3 @@
-import angular from 'angular';
-
 /**
  * Wraps a popover object to the handler (using the angular bootstrap "popover" directive).
  * @param {String=} empty-text - The text to display if the list is empty (defaults to global set in provider).

@@ -2,7 +2,7 @@
   "name": "ng-alerts",
   "version": "1.0.7",
   "description": "",
-  "main": "dist/ng-alerts.js",
+  "main": "dist/ngAlerts.js",
   "scripts": {
     "build": "webpack --env build",
     "dev": "webpack --progress --colors --watch --env dev",
@@ -52,8 +52,10 @@
     "yargs": "6.6.0"
   },
   "dependencies": {
-    "angular": "^1.4.9",
     "angular-ui-bootstrap": "^2.5.0",
     "bootstrap": "^3.3.6"
+  },
+  "peerDependencies": {
+    "angular": "^1.4.9"
   }
 }

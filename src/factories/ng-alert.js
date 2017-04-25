@@ -1,5 +1,3 @@
-import angular from 'angular';
-
 /**
  * An alert model.
  * @member {String} id - The unique id.

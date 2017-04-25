@@ -1,4 +1,3 @@
-import angular from 'angular';
 /**
  * Shows a simple alert total.
  * @param {Bool=} badge - To show the number as a badge.

@@ -1,5 +1,3 @@
-import angular from 'angular';
-
 /**
  * Manages all notification systems.
  */

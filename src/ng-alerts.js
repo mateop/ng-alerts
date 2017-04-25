@@ -1,5 +1,4 @@
-import angular from 'angular';
-import alert from 'angular-ui-bootstrap/src/alert';
+let angular = require('angular');
 
 let moduleName = 'ngAlerts';
 

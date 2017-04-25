@@ -1,5 +1,3 @@
-import angular from 'angular';
-
 /**
  * Assists with writing unique identifiers.
  */
