@@ -1,8 +1,8 @@
 {
   "name": "ng-alerts",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "",
-  "main": "src/ng-alerts.js",
+  "main": "dist/ng-alerts.js",
   "scripts": {
     "build": "webpack --env build",
     "dev": "webpack --progress --colors --watch --env dev",

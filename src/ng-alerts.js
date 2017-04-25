@@ -1,7 +1,9 @@
 import angular from 'angular';
 import alert from 'angular-ui-bootstrap/src/alert';
 
-export default angular.module('ngAlerts', [alert])
+let moduleName = 'ngAlerts';
+
+export default angular.module(moduleName, [alert])
 /**
  * Use this provider to configure defaults.
  * @param {Object} options - The options to configure.
