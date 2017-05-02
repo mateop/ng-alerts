@@ -35,6 +35,9 @@ const config = {
         libraryTarget: 'umd',
         umdNamedDefine: true
     },
+    externals: {
+        'angular': 'angular'
+    },
     module: {
         rules: [
             {
