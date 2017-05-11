@@ -2,7 +2,6 @@
 
 const webpack = require('webpack');
 const UglifyJsPlugin = webpack.optimize.UglifyJsPlugin;
-const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const env = require('yargs').argv.env; // use --env with webpack 2
 
@@ -67,9 +66,10 @@ const config = {
                 use: [{
                     loader: 'html-loader',
                     options: {
-                        minimize: true
+                        minimize: true,
+                        removeAttributeQuotes: false
                     }
-                }],
+                }]
             }
         ]
     },
