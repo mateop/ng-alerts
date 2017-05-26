@@ -664,25 +664,25 @@ module.exports = "<span ng-class=\"{'badge': badge}\">{{count}}</span> ";
 /* 15 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=ng-alerts-list> <div ng-show=\"alerts.length > 0\"> <table class=\"table table-hover table-condensed\"> <tbody> <tr ng-repeat=\"alert in alerts\" ng-class=alert.type> <td> <small>{{alert.getTime()}}</small> <br/> {{alert.msg}} </td> <td> <button ng-click=\"remove(alert.id, $event)\" type=button class=close aria-label=Close> <span aria-hidden=true>&times;</span> </button> </td> </tr> </tbody> </table> </div> <div class=empty-list ng-show=\"alerts.length === 0\"> {{emptyList}} </div> </div> ";
+module.exports = "<div class=\"ng-alerts-list\"> <div ng-show=\"alerts.length > 0\"> <table class=\"table table-hover table-condensed\"> <tbody> <tr ng-repeat=\"alert in alerts\" ng-class=\"alert.type\"> <td> <small>{{alert.getTime()}}</small> <br/> {{alert.msg}} </td> <td> <button ng-click=\"remove(alert.id, $event)\" type=\"button\" class=\"close\" aria-label=\"Close\"> <span aria-hidden=\"true\">&times;</span> </button> </td> </tr> </tbody> </table> </div> <div class=\"empty-list\" ng-show=\"alerts.length === 0\"> {{emptyList}} </div> </div> ";
 
 /***/ }),
 /* 16 */
 /***/ (function(module, exports) {
 
-module.exports = "<div id=ng-alerts-queue class=\"{{ location }}\"> <div uib-alert ng-repeat=\"alert in alerts\" ng-class=\"'alert-' + (alert.type || 'warning')\" type={{alert.type}} close=remove(alert.id)> {{alert.msg}} </div> </div> ";
+module.exports = "<div id=\"ng-alerts-queue\" class=\"{{ location }}\"> <div uib-alert ng-repeat=\"alert in alerts\" ng-class=\"'alert-' + (alert.type || 'warning')\" type=\"{{alert.type}}\" close=\"remove(alert.id)\"> {{alert.msg}} </div> </div> ";
 
 /***/ }),
 /* 17 */
 /***/ (function(module, exports) {
 
-module.exports = "<div> <div class=modal-header> <h3 class=modal-title> Notifications <button type=button ng-click=$dismiss() class=close aria-label=Close> <span aria-hidden=true>&times;</span> </button> </h3> </div> <div class=modal-body> <ng-alerts-list empty-text={{emptyText}}></ng-alerts-list> </div> <div class=modal-footer> <button class=\"btn btn-primary\" type=button ng-click=$dismiss()>Close</button> </div> </div> ";
+module.exports = "<div> <div class=\"modal-header\"> <h3 class=\"modal-title\"> Notifications <button type=\"button\" ng-click=\"$dismiss()\" class=\"close\" aria-label=\"Close\"> <span aria-hidden=\"true\">&times;</span> </button> </h3> </div> <div class=\"modal-body\"> <ng-alerts-list empty-text=\"{{emptyText}}\"></ng-alerts-list> </div> <div class=\"modal-footer\"> <button class=\"btn btn-primary\" type=\"button\" ng-click=\"$dismiss()\">Close</button> </div> </div> ";
 
 /***/ }),
 /* 18 */
 /***/ (function(module, exports) {
 
-module.exports = "<div> <div class=popover-content> <ng-alerts-list empty-text={{emptyText}}></ng-alerts-list> </div> </div> ";
+module.exports = "<div> <div class=\"popover-content\"> <ng-alerts-list empty-text=\"{{emptyText}}\"></ng-alerts-list> </div> </div> ";
 
 /***/ }),
 /* 19 */
